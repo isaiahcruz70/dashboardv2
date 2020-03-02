@@ -1,0 +1,1 @@
+docker run -it --rm wpscanteam/wpscan --url http://www.thepoetwhodidntknowit.com --api-token sJrYHrG2oflw1bSsdqA6ObXYAmqIrGA6asOpeS03nIQ --ignore-main-redirect

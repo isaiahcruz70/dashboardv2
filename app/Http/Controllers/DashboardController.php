@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Queue;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -37,10 +37,15 @@ class DashboardController extends Controller
         echo $submit->save();
         return redirect('/dashboard/finish-queues')->with('successMsg', 'Form Submitted'); 
     }
-    public function show()
+    /**
+     * Show a list of all of the application's users.
+     *
+     * @return Response
+     */
+    public function index()
     {
-        $show = DB::table('queues')->get();
-        return view ('finishqueues')->with('queues',$show); 
+        $submit = DB::table('queues')->get();
+        return view('finishqueues', ['queues' => $submit]);
     }
     public function request()
     {

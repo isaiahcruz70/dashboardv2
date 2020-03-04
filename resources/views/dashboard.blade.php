@@ -27,54 +27,17 @@
       <p>This dashboard is still under construction please give time.</p>
     </div>
   </div>
-  <div class="search">
-    <input type="text" placeholder="Type here"><i class="fa fa-search"></i>
-  </div>
+<!-- This is where you login -->
   <ul class="categories">
-    <li class="nav-item"><i class="fa fa-home fa-fw" aria-hidden="true"></i><a class="nav-link active" href="#"> About us</a>
-      <ul class="side-nav-dropdown">
-        <li><a href="#">Lorem ipsum</a></li>
-        <li><a href="#">ipsum dolor</a></li>
-        <li><a href="#">dolor ipsum</a></li>
-        <li><a href="#">amet consectetur</a></li>
-        <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
+    <li class="nav-item"><i class="fa fa-home fa-fw" aria-hidden="true"></i><a class="nav-link active" href="/dashboard">Home</a>
     </li>
-    <li class="nav-item"><i class="fa fa-support fa-fw"></i><a class="nav-link" href="#"> Subscribe us</a>
-      <ul class="side-nav-dropdown">
-        <li><a href="#">Lorem ipsum</a></li>
-        <li><a href="#">ipsum dolor</a></li>
-        <li><a href="#">dolor ipsum</a></li>
-        <li><a href="#">amet consectetur</a></li>
-        <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
+    <li class="nav-item"><i class="fa fa-support fa-fw"></i><a class="nav-link" href="/dashboard/request-queue">Request A Queue</a>
     </li>
-    <li class="nav-item"><i class="fa fa-envelope fa-fw"></i><a class="nav-link" href="#"> Contact us</a>
-      <ul class="side-nav-dropdown">
-        <li><a href="#">Lorem ipsum</a></li>
-        <li><a href="#">ipsum dolor</a></li>
-        <li><a href="#">dolor ipsum</a></li>
-        <li><a href="#">amet consectetur</a></li>
-        <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
+    <li class="nav-item"><i class="fa fa-envelope fa-fw"></i><a class="nav-link" href="/dashboard/finish-queues">Finished Queues</a>
     </li>
     <li class="nav-item"><i class="fa fa-users fa-fw"></i><a class="nav-link" href="#"> Our team</a>
-      <ul class="side-nav-dropdown">
-        <li><a href="#">Lorem ipsum</a></li>
-        <li><a href="#">ipsum dolor</a></li>
-        <li><a href="#">dolor ipsum</a></li>
-        <li><a href="#">amet consectetur</a></li>
-        <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
     </li>
     <li class="nav-item"><i class="fa fa-bolt fa-fw"></i><a class="nav-link" href="#"> Testimonials</a>
-      <ul class="side-nav-dropdown">
-        <li><a href="#">Lorem ipsum</a></li>
-        <li><a href="#">ipsum dolor</a></li>
-        <li><a href="#">dolor ipsum</a></li>
-        <li><a href="#">amet consectetur</a></li>
-        <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
     </li>
     <p>Example:</p>
     <li class="nav-item"><i class="fa fa-envelope-open-o fa-fw"></i><a class="nav-link" href="#"> Messages <span class="num dang">56</span></a></li>

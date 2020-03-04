@@ -26,6 +26,9 @@
         <ul>
             <li>
                 <h1>im done!</h1>
+                @foreach ($submit as $show) 
+                {{ $show->name }}
+              @endforeach
             </li>
         </ul>
     </div>

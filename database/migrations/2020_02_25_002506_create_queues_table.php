@@ -13,17 +13,16 @@ class CreateQueuesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sumbit_queues', function (Blueprint $table) {
+        Schema::create('queues', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->date('date');
             $table->string('rep_name');
             $table->string('client_name');
             $table->string('business_name');
-            $table->string('email_name');
+            $table->string('email');
             $table->string('reason');
-            $table->integer('phone');
+            $table->char('phone');
             $table->text('message');
-            $table->text('vulnerability');
+            
             $table->timestamps();
         });
     }

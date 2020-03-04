@@ -36,13 +36,9 @@
         <p>{{\Session::get(success)}}</p>
       </div>
       @endif
-  <form action="/dashboard/queue-submitted" method="POST">
+  <form action="submit" method="POST">
   @csrf
     <ul class="flex-outer form-group">
-    <li>
-        <label for="date">Date</label>
-        <input class="form-control" type="numbers" id="date" placeholder="Enter submission date" name="date">
-      </li>
     <li>
         <label for="rep-name">Rep. Name</label>
         <input class="form-control" type="text" id="rep-name" placeholder="Enter your name here" name="rep_name">

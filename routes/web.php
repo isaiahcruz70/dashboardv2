@@ -27,16 +27,17 @@ Auth::routes();
 //         'post' => $posts[$post]
 //     ]);
 // });
+Route::get('/dashboard/request-queue', 'DashboardController@request');
 
-Route::get('/posts/{post}', 'PostsController@show');
+Route::post('submit', 'DashboardController@store');
+
+Route::view('form', 'queue');
 
 Route::post('/dashboard/queue-submitted', 'DashboardController@storeQueue');
 
-Route::get('/dashboard/request-queue', 'DashboardController@create');
+Route::get('/dashboard/finish-queues', 'DashboardController@show');
 
-Route::get('/dashboard/finish-queues', 'FinishQueuesController@index');
-
-Route::get('/dashboard', 'DashboardController@index');
+Route::get('/dashboard', 'DashboardController@home');
 
 // Route::get('/dashboard/vuln-add', 'VulnController@store');
 

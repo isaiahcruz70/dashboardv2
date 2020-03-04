@@ -25,9 +25,7 @@
     <div class="center">
         <ul>
             <li>
-                @foreach ($newqueues as $newqueue)
-                <p>{{ $newdevice }}</p>
-                @endforeach
+                <h1>im done!</h1>
             </li>
         </ul>
     </div>

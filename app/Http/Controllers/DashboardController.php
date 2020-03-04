@@ -3,55 +3,47 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Queue;
+use DB;
 
 class DashboardController extends Controller
 {
-    public function index()
+    public function home()
     {
-        $newqueues = NewQueue::all();
-
-        return view('finishqueues');
-    }
-    public function create()
-    {
-        return view('queue');
+        return view('dashboard');
     }
     public function store(Request $request)
     {
-        $newqueue = new portal;
-    }
-    public function storeQueue(){
- 
-        $newqueue = new NewQueue();
- 
-        $newqueue->date = request('date');
-        $newqueue->rep_name = request('rep_name');
-        $newqueue->client_name = request('client_name');
-        $newqueue->business_name = request('business_name');
-        $newqueue->email = request('email');
-        $newqueue->reason = request('reason');
-        $newqueue->phone = request('phone');
-        $newqueue->message = request('message');
-        $newqueue->vulnerability = request('vulnerability');
- 
-        $newqueue->save();
- 
-        return redirect('/dashboard/queue-submitted');
- 
-    }
-    // protected function create(array $data)
-    // {
-    //     return SubmitQueue::create([
-    //         'date' => $data['date'],
-    //         'rep-name' => $data['rep-name'],
-    //         'client-name' => $data['client-name'],
-    //         'business-name' => $data['business-name'],
-    //         'email' => $data['email'],
-    //         'reason' => $data['reason'],
-    //         'phone' => $data['phone'],
-    //         'message' => $data['message'],
-    //         'vulnerability' => $data['vulnerability'],
+        $this->validate($request,[
+            'rep_name' => 'required',
+            'client_name' => 'required',
+            'business_name' => 'required',
+            'email' => 'required',
+            'reason' => 'required',
+            'phone' => 'required',
+            'message' => 'required',
             
-    //     ]);
-    // }
+        ]);
+        print_r($request->input());
+        $submit = new Queue();   
+        $submit->rep_name = $request->rep_name;   
+        $submit->client_name = $request->client_name;   
+        $submit->business_name = $request->business_name;   
+        $submit->email = $request->email;   
+        $submit->reason = $request->reason;   
+        $submit->phone = $request->phone;   
+        $submit->message = $request->message;   
+        // $submit->vulnerability = $request->vulnerability;
+        echo $submit->save();
+        return redirect('/dashboard/finish-queues')->with('successMsg', 'Form Submitted'); 
+    }
+    public function show()
+    {
+        $show = DB::table('queues')->get();
+        return view ('finishqueues')->with('queues',$show); 
+    }
+    public function request()
+    {
+        return redirect('form');
+    }
 }
